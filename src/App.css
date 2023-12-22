@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+* {
+  font-family: "Poppins";
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.image img {
+  width: 70%;
+}
+
+.heading h1 {
+  font-size: 8vw;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.heading button {
+  outline: none;
+  padding: 6px 50px;
+  background-color: #343580;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  transition: 0.2s;
+}
+
+.heading button:hover {
+  background-color: #131351;
+}
+.score {
+  text-align: center;
+  width: 200px;
+}
+.score h1 {
+  font-size: 50px;
+  font-weight: 500;
+}
+@media screen and (max-width: 756px) {
+  .header {
+    flex-direction: column;
+  }
+}
+.heading {
+  display: flex;
+
+  flex-direction: column;
+}
+.upper {
+  display: flex;
+  padding: 0 10px;
+  justify-content: space-between;
+  height: 150px;
+}
+.selection {
+  display: flex;
+  gap: 10px;
+  padding-right: 30px;
+  align-items: center;
+}
+.heading p {
+  font-weight: 500;
+  font-size: 20px;
+}
+.box {
+  border: 1px solid black;
+  margin-top: 10px;
+  width: 40px;
+  font-size: 20px;
+  display: grid;
+  place-items: center;
+  height: 40px;
+  cursor: pointer;
+}
+.lower {
+  display: flex;
+  justify-content: center;
+}
+.roll_dice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.roll_dice h1 {
+  font-weight: 400;
+  font-size: 20px;
+}
+.roll_dice button {
+  height: 40px;
+  width: 150px;
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.roll_dice button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+.dice_faces img {
+  width: 200px;
+  cursor: pointer;
+  animation: spin alternate 0.5s;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+    transform: rotate3d(1, 1, 1, 10deg);
+  }
+  10% {
+    transform: rotate3d(1, 1, 1, 45deg);
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.instruction {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.instruction button {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 0px;
+}
+.instruction button:hover {
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+}
+.error {
+  color: red;
+}
+.rules {
+  height: 150px;
+  width: 800px;
+  background-color: rgb(217, 221, 221);
+  padding: 15px;
+  border-radius: 15px;
+  position: absolute;
+  bottom: 10px;
+  margin: auto;
+  right: 350px;
+  transition: ease-in-out 0.3s;
+}
